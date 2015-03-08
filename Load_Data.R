@@ -1,8 +1,8 @@
 # dowdnload and extract the data	
-#download.file(paste0('https://d396qusza40orc.cloudfront.net/', 'exdata%2Fdata%2Fhousehold_power_consumption.zip'), method='curl', destfile='exdata-data-household_power_consumption.zip') 
-#unzip('exdata-data-household_power_consumption.zip')
+ download.file(paste0('https://d396qusza40orc.cloudfront.net/', 'exdata%2Fdata%2Fhousehold_power_consumption.zip'), method='curl', destfile='exdata-data-household_power_consumption.zip') 
+ unzip('exdata-data-household_power_consumption.zip')
 
-#library(lubridate)
+library(lubridate)
 	    
 # Read data, reduce it to the dates boundaries
 A <- read.table('household_power_consumption.txt', header = TRUE, sep=';', na.strings='?', colClasses = c(rep('character', 2), rep('numeric', 7)))
